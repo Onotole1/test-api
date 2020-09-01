@@ -15,7 +15,7 @@ class ApplicationTest {
     @Test
     fun `test get all`() {
         withTestApplication({ module() }) {
-            with(handleRequest(HttpMethod.Get, "/api/v1/posts")) {
+            with(handleRequest(HttpMethod.Get, "/api/v1/post")) {
                 assertEquals(HttpStatusCode.OK, response.status())
                 assertEquals(
                     ContentType.Application.Json.withCharset(Charsets.UTF_8),
